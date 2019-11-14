@@ -9,6 +9,11 @@
             "command": "avra ./src/gpio_write.asm"
         },
         {
+            "label": "flash_gpio_write",
+            "type": "shell",
+            "command": "avrdude -c Usbasp -p t85 -U flash:w:./src/gpio_write.hex"
+        },
+        {
             "label": "asm_template",
             "type": "shell",
             "command": "avra ./src/template.asm"

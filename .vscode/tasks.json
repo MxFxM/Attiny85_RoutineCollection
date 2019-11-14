@@ -1,0 +1,27 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "asm_gpio_write",
+            "type": "shell",
+            "command": "avra ./src/gpio_write.asm"
+        },
+        {
+            "label": "asm_template",
+            "type": "shell",
+            "command": "avra ./src/template.asm"
+        },
+        {
+            "label": "burn_bootloader_int8MHz",
+            "type": "shell",
+            "command": "avrdude -c Usbasp -p t85 -U lfuse:w:0xe2:m hfuse:w:0xdf:m efuse:w:0xff:m"
+        },
+        {
+            "label": "burn_bootloader_int16MHz",
+            "type": "shell",
+            "command": "avrdude -c Usbasp -p t85 -U lfuse:w:0xf1:m hfuse:w:0xdf:m efuse:w:0xff:m"
+        }
+    ]
+}

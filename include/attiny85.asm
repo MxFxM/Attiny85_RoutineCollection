@@ -1,21 +1,21 @@
 ; -------------------------------------------------------------------------------------------------
 ; REGISTERS
 ; -------------------------------------------------------------------------------------------------
-.EQU SREG = 0x3F   ; status register
-;.EQU STATUS_I = 7
-;.EQU STATUS_T = 6
-;.EQU STATUS_H = 5
-;.EQU STATUS_S = 4
-;.EQU STATUS_V = 3
-;.EQU STATUS_N = 2
-;.EQU STATUS_Z = 1
-;.EQU STATUS_C = 0
+.EQU SREG = 0x3F        ; avr status register
+.EQU SREG_I = 7         ; global interrupt enable
+.EQU SREG_T = 6         ; bit copy storage
+.EQU SREG_H = 5         ; half carry flag
+.EQU SREG_S = 4         ; sign bit
+.EQU SREG_V = 3         ; twos complement overflow flag
+.EQU SREG_N = 2         ; negative flag
+.EQU SREG_Z = 1         ; zero flag
+.EQU SREG_C = 0         ; carry flag
 
-.EQU SPH = 0x3E ; stack pointer high
+.EQU SPH = 0x3E         ; stack pointer high
 .EQU SP9 = 1
 .EQU SP8 = 0
 
-.EQU SPL = 0x3D ; stack pointer low
+.EQU SPL = 0x3D         ; stack pointer low
 .EQU SP7 = 7
 .EQU SP6 = 6
 .EQU SP5 = 5

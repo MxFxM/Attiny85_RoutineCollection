@@ -4,14 +4,14 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "asm_gpio_write",
+            "label": "asm_test",
             "type": "shell",
-            "command": "avra ./src/gpio_write.asm"
+            "command": "avra ./src/test.asm"
         },
         {
-            "label": "flash_gpio_write",
+            "label": "flash_test",
             "type": "shell",
-            "command": "avrdude -c Usbasp -p t85 -U flash:w:./src/gpio_write.hex"
+            "command": "avrdude -c Usbasp -p t85 -U flash:w:./src/test.hex"
         },
         {
             "label": "asm_template",

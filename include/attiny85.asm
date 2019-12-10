@@ -35,7 +35,7 @@
 .EQU INTF0 = 6
 .EQU PCIF = 5
 
-.EQU TIMSK = 0x39 ; timer interrupt mask
+.EQU TIMSK = 0x39       ; timer interrupt mask
 .EQU OCIE1A = 6
 .EQU OCIE1B = 5
 .EQU OCIE0A = 4
@@ -43,11 +43,11 @@
 .EQU TOIE1 = 2
 .EQU TOIE0 = 1
 
-.EQU TIFR = 0x38
+.EQU TIFR = 0x38        ; timer interrupt flag register
 .EQU OCF1A = 6
 .EQU OCF1B = 5
-.EQU OCF0A = 4
-.EQU OCF0B = 3
+.EQU OCF0A = 4          ; output compare flag A timer 0
+.EQU OCF0B = 3          ; output compare flag B timer 0
 .EQU TOV1 = 2
 .EQU TOV0 = 1
 
@@ -77,17 +77,17 @@
 .EQU EXTRF = 1
 .EQU PORF = 0
 
-.EQU TCCR0B = 0x33
+.EQU TCCR0B = 0x33      ; timer couter 0 control register B
 .EQU FOC0A = 7
 .EQU FOC0B = 6
 .EQU WGM02 = 3
-.EQU CS02 = 2
-.EQU CS01 = 1
-.EQU CS00 = 0
+.EQU CS02 = 2           ; clock source 2
+.EQU CS01 = 1           ; clock source 1
+.EQU CS00 = 0           ; clock source 0
 
-.EQU TCNT0 = 0x32  ; timer counter 0
+.EQU TCNT0 = 0x32       ; timer counter 0
 
-.EQU OSCCAL = 0x31 ; oscillator calibration register
+.EQU OSCCAL = 0x31      ; oscillator calibration register
 
 .EQU TCCR1 = 0x30
 .EQU CTC1 = 7
@@ -99,11 +99,11 @@
 .EQU CS11 = 1
 .EQU CS10 = 0
 
-.EQU TCNT1 = 0x2F ; timer counter 1
+.EQU TCNT1 = 0x2F      ; timer counter 1
 
-.EQU OCR1A = 0x2E ; timer counter 1 compare register A
+.EQU OCR1A = 0x2E      ; timer counter 1 compare register A
 
-.EQU OCR1C = 0x2D ; timer counter 1 compare register C
+.EQU OCR1C = 0x2D      ; timer counter 1 compare register C
 
 .EQU GTCCR = 0x2C
 .EQU TSM = 7
@@ -115,7 +115,7 @@
 .EQU PSR1 = 1
 .EQU PSR0 = 0
 
-.EQU OCR1B = 0x2B ; timer counter 1 compare register B
+.EQU OCR1B = 0x2B       ; timer counter 1 compare register B
 
 .EQU TCCR0A = 0x2A
 .EQU COM0A1 = 7
@@ -125,9 +125,9 @@
 .EQU WGM01 = 1
 .EQU WGM00 = 0
 
-.EQU OCR0A = 0x29 ; timer counter 0 compare register A
+.EQU OCR0A = 0x29       ; timer counter 0 compare register A
 
-.EQU OCR0B = 0x28 ; timer counter 0 compare register B
+.EQU OCR0B = 0x28       ; timer counter 0 compare register B
 
 .EQU PLLCSR = 0x27
 .EQU LSM = 7
@@ -197,7 +197,7 @@
 .EQU EEAR1 = 1
 .EQU EEAR0 = 0
 
-.EQU EEDR = 0x1D ; eeprom data register
+.EQU EEDR = 0x1D        ; eeprom data register
 
 .EQU EECR = 0x1C
 .EQU EEPM1 = 5
@@ -213,7 +213,7 @@
 
 ; reserved
 
-.EQU PORTB = 0x18  ; data output register port B
+.EQU PORTB = 0x18       ; data output register port B
 .EQU PORTB5 = 5
 .EQU PORTB4 = 4
 .EQU PORTB3 = 3
@@ -221,7 +221,7 @@
 .EQU PORTB1 = 1
 .EQU PORTB0 = 0
 
-.EQU DDRB = 0x17   ; data direction register port B
+.EQU DDRB = 0x17        ; data direction register port B
 .EQU DDB5 = 5
 .EQU DDB4 = 4
 .EQU DDB3 = 3
@@ -229,7 +229,7 @@
 .EQU DDB1 = 1
 .EQU DDB0 = 0
 
-.EQU PINB = 0x16   ; data input register port B
+.EQU PINB = 0x16        ; data input register port B
 .EQU PINB5 = 5
 .EQU PINB4 = 4
 .EQU PINB3 = 3
@@ -237,7 +237,7 @@
 .EQU PINB1 = 1
 .EQU PINB0 = 0
 
-.EQU PCMSK = 0x15 ; pin change interrupt mask
+.EQU PCMSK = 0x15       ; pin change interrupt mask
 .EQU PCINT5 = 5
 .EQU PCINT4 = 4
 .EQU PCINT3 = 3
@@ -253,17 +253,17 @@
 .EQU AIN1D = 1
 .EQU AIN0D = 0
 
-.EQU GPIOR2 = 0x13 ; general purpose io register 2
+.EQU GPIOR2 = 0x13      ; general purpose io register 2
 
-.EQU GPIOR1 = 0x12 ; general purpose io register 1
+.EQU GPIOR1 = 0x12      ; general purpose io register 1
 
-.EQU GPIOR0 = 0x11 ; general purpose io register 0
+.EQU GPIOR0 = 0x11      ; general purpose io register 0
 
-.EQU USIBR = 0x10  ; usi buffer register
+.EQU USIBR = 0x10       ; usi buffer register
 
-.EQU USIDR = 0x0F  ; usi data register
+.EQU USIDR = 0x0F       ; usi data register
 
-.EQU USISR = 0x0E  ; usi status register
+.EQU USISR = 0x0E       ; usi status register
 .EQU USISIF = 7
 .EQU USIOIF = 6
 .EQU USIPF = 5
@@ -273,7 +273,7 @@
 .EQU USICNT1 = 1
 .EQU USICNT0 = 0
 
-.EQU USICR = 0x0D  ; usi counter register
+.EQU USICR = 0x0D       ; usi counter register
 .EQU USISIE = 7
 .EQU USIOIE = 6
 .EQU USIWM1 = 5
@@ -320,9 +320,9 @@
 .EQU ADPS1 = 1
 .EQU ADPS0 = 0
 
-.EQU ADCH = 0x05   ; adc data high
+.EQU ADCH = 0x05        ; adc data high
 
-.EQU ADCL = 0x04   ; adc data low
+.EQU ADCL = 0x04        ; adc data low
 
 .EQU ADCSRB = 0x03
 .EQU BIN = 7

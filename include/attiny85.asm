@@ -12,18 +12,18 @@
 .EQU SREG_C = 0         ; carry flag
 
 .EQU SPH = 0x3E         ; stack pointer high
-.EQU SP9 = 1
-.EQU SP8 = 0
+.EQU SP9 = 1            ; bit 9
+.EQU SP8 = 0            ; bit 8
 
 .EQU SPL = 0x3D         ; stack pointer low
-.EQU SP7 = 7
-.EQU SP6 = 6
-.EQU SP5 = 5
-.EQU SP4 = 4
-.EQU SP3 = 3
-.EQU SP2 = 2
-.EQU SP1 = 1
-.EQU SP0 = 0
+.EQU SP7 = 7            ; bit 7
+.EQU SP6 = 6            ; bit 6
+.EQU SP5 = 5            ; bit 5
+.EQU SP4 = 4            ; bit 4
+.EQU SP3 = 3            ; bit 3
+.EQU SP2 = 2            ; bit 2
+.EQU SP1 = 1            ; bit 1
+.EQU SP0 = 0            ; bit 0
 
 ; reserved
 
@@ -36,20 +36,20 @@
 .EQU PCIF = 5
 
 .EQU TIMSK = 0x39       ; timer interrupt mask
-.EQU OCIE1A = 6
-.EQU OCIE1B = 5
-.EQU OCIE0A = 4
-.EQU OCIE0B = 3
-.EQU TOIE1 = 2
-.EQU TOIE0 = 1
+.EQU OCIE1A = 6         ; output compare interrupt enable timer counter 1 A
+.EQU OCIE1B = 5         ; output compare interrupt enable timer counter 1 B
+.EQU OCIE0A = 4         ; output compare interrupt enable timer counter 0 A
+.EQU OCIE0B = 3         ; output compare interrupt enable timer counter 0 B
+.EQU TOIE1 = 2          ; timer counter 1 overflow interrupt enable
+.EQU TOIE0 = 1          ; timer coutner 0 overflow interrupt enable
 
 .EQU TIFR = 0x38        ; timer interrupt flag register
-.EQU OCF1A = 6
-.EQU OCF1B = 5
-.EQU OCF0A = 4          ; output compare flag A timer 0
-.EQU OCF0B = 3          ; output compare flag B timer 0
-.EQU TOV1 = 2
-.EQU TOV0 = 1
+.EQU OCF1A = 6          ; output compare flag A timer counter 1
+.EQU OCF1B = 5          ; output compare flag B timer counter 1
+.EQU OCF0A = 4          ; output compare flag A timer counter 0
+.EQU OCF0B = 3          ; output compare flag B timer counter 0
+.EQU TOV1 = 2           ; timer counter 1 overflow flag
+.EQU TOV0 = 1           ; timer counter 1 overflow flag
 
 .EQU SPMCSR = 0x37
 .EQU RSIG = 5
@@ -78,32 +78,32 @@
 .EQU PORF = 0
 
 .EQU TCCR0B = 0x33      ; timer couter 0 control register B
-.EQU FOC0A = 7
-.EQU FOC0B = 6
-.EQU WGM02 = 3
-.EQU CS02 = 2           ; clock source 2
-.EQU CS01 = 1           ; clock source 1
-.EQU CS00 = 0           ; clock source 0
+.EQU FOC0A = 7          ; force output compare A timer counter 0
+.EQU FOC0B = 6          ; force output compare B timer counter 0
+.EQU WGM02 = 3          ; waveform generation mode 2 timer counter 0
+.EQU CS02 = 2           ; clock source 2 timer counter 0
+.EQU CS01 = 1           ; clock source 1 timer counter 0
+.EQU CS00 = 0           ; clock source 0 timer counter 0
 
 .EQU TCNT0 = 0x32       ; timer counter 0
 
 .EQU OSCCAL = 0x31      ; oscillator calibration register
 
-.EQU TCCR1 = 0x30
+.EQU TCCR1 = 0x30       ; timer counter 1 control register
 .EQU CTC1 = 7
 .EQU PWM1A = 6
-.EQU COM1A1 = 5
-.EQU COM1A0 = 4
-.EQU CS13 = 3
-.EQU CS12 = 2
-.EQU CS11 = 1
-.EQU CS10 = 0
+.EQU COM1A1 = 5         ; compare output 1 A timer counter 1 
+.EQU COM1A0 = 4         ; compare output 0 A timer counter 1
+.EQU CS13 = 3           ; clock source 3 timer counter 1
+.EQU CS12 = 2           ; clock source 2 timer counter 1
+.EQU CS11 = 1           ; clock source 1 timer counter 1
+.EQU CS10 = 0           ; clock source 0 timer counter 1
 
-.EQU TCNT1 = 0x2F      ; timer counter 1
+.EQU TCNT1 = 0x2F       ; timer counter 1
 
-.EQU OCR1A = 0x2E      ; timer counter 1 compare register A
+.EQU OCR1A = 0x2E       ; timer counter 1 compare register A
 
-.EQU OCR1C = 0x2D      ; timer counter 1 compare register C
+.EQU OCR1C = 0x2D       ; timer counter 1 compare register C
 
 .EQU GTCCR = 0x2C
 .EQU TSM = 7
@@ -117,13 +117,13 @@
 
 .EQU OCR1B = 0x2B       ; timer counter 1 compare register B
 
-.EQU TCCR0A = 0x2A
-.EQU COM0A1 = 7
-.EQU COM0A0 = 6
-.EQU COM0B1 = 5
-.EQU COM0B0 = 4
-.EQU WGM01 = 1
-.EQU WGM00 = 0
+.EQU TCCR0A = 0x2A      ; timer conter 0 control register A
+.EQU COM0A1 = 7         ; compare output 1 A timer counter 0
+.EQU COM0A0 = 6         ; compare output 0 A timer counter 0
+.EQU COM0B1 = 5         ; compare output 1 B timer counter 0
+.EQU COM0B0 = 4         ; compare output 0 B timer counter 0
+.EQU WGM01 = 1          ; waveform generation mode 1 timer counter 0
+.EQU WGM00 = 0          ; waveform generation mode 0 timer counter 0
 
 .EQU OCR0A = 0x29       ; timer counter 0 compare register A
 

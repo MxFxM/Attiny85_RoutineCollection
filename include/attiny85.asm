@@ -105,15 +105,15 @@
 
 .EQU OCR1C = 0x2D       ; timer counter 1 compare register C
 
-.EQU GTCCR = 0x2C
-.EQU TSM = 7
+.EQU GTCCR = 0x2C       ; general timer counter control register
+.EQU TSM = 7            ; timer counter synchronisation mode
 .EQU PWM1B = 6
 .EQU COM1B1 = 5
 .EQU COM1B0 = 4
 .EQU FOC1B = 3
 .EQU FOC1A = 2
-.EQU PSR1 = 1
-.EQU PSR0 = 0
+.EQU PSR1 = 1           ; prescaler reset timer counter 1
+.EQU PSR0 = 0           ; prescaler reset timer counter 0
 
 .EQU OCR1B = 0x2B       ; timer counter 1 compare register B
 
